@@ -9682,7 +9682,6 @@ export class FinancialTableComponent implements OnInit {
       displayData.push(row);
     });
 
-    console.log("companyNames", companyNames, months, displayData);
     return displayData;
   }
 
@@ -9690,6 +9689,7 @@ export class FinancialTableComponent implements OnInit {
     // remove month that not include in the lastest 12 months
     const now = new Date();
     const last12Months = new Date(now.setMonth(now.getMonth() - 12));
+
     return Array.from(new Set(this.sourceData.filter((item: any) =>
       new Date(item.YearID, item.MonthID - 1) >= last12Months
     ).map(d => `${d.MonthID}-${d.YearID}`)));
