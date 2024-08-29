@@ -1,0 +1,32 @@
+table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+th.mat-header-cell {
+  white-space: nowrap;
+}
+
+.highlight-revenue-surge {
+  background-color: rgb(93, 143, 93);
+}
+
+.highlight-profit-drop {
+  background-color: rgb(239, 134, 134);
+}
+
+.highlight-identical {
+  background-color: rgb(197, 171, 171)
+}
+
+
+::ng-deep {
+  .financial-table {
+    &.mat-mdc-table {
+      .mat-mdc-header-cell , .mat-mdc-cell {
+        border: 1px solid;
+      }
+    }
+  }
+
+}
